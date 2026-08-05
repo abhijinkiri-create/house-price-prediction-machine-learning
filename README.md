@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🛍️ Customer Segmentation using K-Means Clustering
+# 🏠 House Price Prediction using Machine Learning
 
-### SkillCraft Technology Machine Learning Internship — Task 02
+### SkillCraft Technology Machine Learning Internship — Task 01
 
-### Machine Learning Project for Customer Segmentation using **K-Means Clustering**, **PCA**, **EDA**, and **Business Insights**
+### Machine Learning Project for House Price Prediction using **Regression Models**, **EDA**, **Feature Engineering**, **Hyperparameter Tuning**, and **Machine Learning Pipeline**
 
 </div>
 
@@ -20,7 +20,9 @@
 
 ![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-blue?logo=numpy)
 
-![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-purple?logo=plotly)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
+
+![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Plots-blue)
 
 ![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)
 
@@ -28,11 +30,11 @@
 
 ---
 
-# 📊 Customer Segmentation
+# 🏡 House Price Prediction
 
-![Customer Clusters](images/customer_clusters.png)
+![House Price Prediction](images/house_price_prediction.png)
 
-A complete Machine Learning project that segments mall customers into meaningful groups using the **K-Means Clustering** algorithm. The project includes **Exploratory Data Analysis (EDA)**, **Feature Engineering**, **Feature Scaling**, **Cluster Evaluation**, **Principal Component Analysis (PCA)**, and actionable **Business Insights**.
+A complete Machine Learning project that predicts house prices based on property characteristics using **Regression Algorithms**. The project includes **Exploratory Data Analysis (EDA)**, **Feature Engineering**, **Data Preprocessing**, **Hyperparameter Tuning**, **Model Comparison**, **Machine Learning Pipeline**, and **Business Insights**.
 
 ---
 
@@ -46,11 +48,12 @@ A complete Machine Learning project that segments mall customers into meaningful
 - Project Workflow
 - Exploratory Data Analysis
 - Data Preprocessing
+- Feature Engineering
 - Model Building
 - Model Evaluation
 - Visualizations
-- Business Insights
 - Results
+- Business Insights
 - Installation
 - Project Structure
 - Future Improvements
@@ -62,68 +65,67 @@ A complete Machine Learning project that segments mall customers into meaningful
 
 # 📖 Overview
 
-Customer segmentation is one of the most important applications of **Unsupervised Machine Learning**. Instead of predicting values, clustering algorithms identify hidden patterns within customer data and group customers with similar purchasing behavior.
+House price prediction is one of the most common applications of **Supervised Machine Learning**. By learning patterns from historical housing data, machine learning models can accurately estimate the selling price of houses based on their features.
 
-This project applies the **K-Means Clustering Algorithm** to segment mall customers based on:
+In this project, multiple regression algorithms are trained and compared using features such as:
 
-- Gender
-- Age
-- Annual Income
-- Spending Score
+- Overall Quality
+- Living Area
+- Garage Capacity
+- Basement Area
+- Year Built
+- Lot Area
+- Neighborhood
+- House Style
+- Total Rooms
+- Location Features
 
-The optimal number of clusters was determined using both the **Elbow Method** and the **Silhouette Score**, ensuring that the resulting customer groups are meaningful and easy to interpret from a business perspective.
+The project follows an end-to-end Machine Learning workflow from **data preprocessing** to **model evaluation**, ensuring reliable and accurate house price predictions.
 
 ---
 
 # 🎯 Project Objectives
 
 - Perform Exploratory Data Analysis (EDA)
-- Analyze customer demographics
-- Understand purchasing behavior
-- Handle data preprocessing
+- Analyze important housing features
+- Handle missing values
+- Encode categorical variables
 - Perform Feature Engineering
-- Apply Feature Scaling using StandardScaler
-- Determine the optimal number of clusters
-- Train a K-Means Clustering model
-- Evaluate clustering quality
-- Visualize clusters using PCA
-- Generate customer personas
-- Provide business recommendations
+- Select important features
+- Compare multiple regression algorithms
+- Optimize models using Hyperparameter Tuning
+- Build a Machine Learning Pipeline
+- Evaluate model performance
+- Predict house prices for unseen data
 
 ---
 
 # 📂 Dataset
 
-**Dataset Name:** Mall Customers Dataset
+**Dataset Name:** House Prices - Advanced Regression Techniques
 
-**Source:** https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
+**Source:** https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
-## Dataset Features
+## Dataset Information
 
-| Feature | Description |
-|----------|-------------|
-| CustomerID | Unique customer identifier |
-| Gender | Male/Female |
-| Age | Customer age |
-| Annual Income (k$) | Annual income in thousand dollars |
-| Spending Score (1–100) | Customer spending score assigned by the mall |
-
-### Dataset Size
-
-- Rows : **200**
-- Columns : **5**
+| Item | Value |
+|------|------|
+| Training Samples | 1460 |
+| Testing Samples | 1459 |
+| Features | 80 |
+| Target Variable | SalePrice |
 
 ---
 
-# 🛠️ Technologies Used
+# 🛠 Technologies Used
 
 | Category | Tools |
 |-----------|-------|
 | Programming Language | Python |
 | Data Analysis | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn, Plotly |
+| Data Visualization | Matplotlib, Seaborn |
 | Machine Learning | Scikit-Learn |
-| Dimensionality Reduction | PCA |
+| Model Serialization | Joblib |
 | Notebook | Jupyter Notebook |
 | Version Control | Git & GitHub |
 
@@ -132,13 +134,19 @@ The optimal number of clusters was determined using both the **Elbow Method** an
 # 🚀 Built With
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-black?logo=pandas)
+
 ![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-blue?logo=numpy)
+
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
+
 ![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Plots-blue)
-![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-purple?logo=plotly)
+
 ![Git](https://img.shields.io/badge/Git-Version%20Control-red?logo=git)
+
 ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)
 
 ---
@@ -149,16 +157,30 @@ The optimal number of clusters was determined using both the **Elbow Method** an
 flowchart TD
 
 A[Load Dataset]
+
 B[Data Cleaning]
+
 C[Exploratory Data Analysis]
-D[Feature Engineering]
-E[Feature Scaling]
-F[Elbow Method]
-G[Silhouette Analysis]
-H[K-Means Clustering]
-I[Cluster Evaluation]
-J[PCA Visualization]
-K[Business Insights]
+
+D[Missing Value Handling]
+
+E[Categorical Encoding]
+
+F[Feature Engineering]
+
+G[Train-Test Split]
+
+H[Model Training]
+
+I[Hyperparameter Tuning]
+
+J[Feature Selection]
+
+K[Model Evaluation]
+
+L[Prediction]
+
+M[Submission File]
 
 A --> B
 B --> C
@@ -170,6 +192,8 @@ G --> H
 H --> I
 I --> J
 J --> K
+K --> L
+L --> M
 ```
 
 ---
@@ -178,151 +202,160 @@ J --> K
 
 The following analyses were performed:
 
-- Customer age distribution
-- Annual income distribution
-- Spending score distribution
-- Gender distribution
-- Correlation heatmap
-- Pairplot visualization
-- Outlier detection using Boxplots
+- Sale Price Distribution
+- Correlation Heatmap
+- Missing Value Analysis
+- Feature Distribution
+- Outlier Detection
+- Feature Relationships
+- Numerical vs Categorical Analysis
 
-EDA helps understand the underlying structure of customer behavior before clustering.
+EDA provides valuable insights into the dataset and helps identify influential features affecting house prices.
 
 ---
 
 # ⚙️ Data Preprocessing
 
-The following preprocessing steps were performed:
+The preprocessing pipeline includes:
 
-- Checked missing values
-- Verified duplicate records
-- Encoded categorical features
-- Selected important features
-- Standardized numerical variables using **StandardScaler**
+- Handling Missing Values
+- Removing Duplicates
+- Encoding Categorical Features
+- Feature Scaling (where applicable)
+- Feature Engineering
+- Train-Test Split
 
-Feature Scaling ensures that all variables contribute equally during clustering.
-
----
-
-# 🤖 Model Building
-
-The project uses the **K-Means Clustering Algorithm**.
-
-### Steps
-
-1. Load dataset
-2. Select features
-3. Apply StandardScaler
-4. Find optimal K using Elbow Method
-5. Validate using Silhouette Score
-6. Train K-Means model
-7. Predict customer clusters
-8. Save clustered dataset
+These preprocessing steps improve model performance and ensure consistent predictions.
 
 ---
 
-# 📈 Model Evaluation
+# 🧠 Feature Engineering
 
-| Metric | Value |
-|---------|------:|
-| Algorithm | K-Means Clustering |
-| Optimal Number of Clusters | **5** |
-| Silhouette Score | **0.xxx** |
-| Davies-Bouldin Index | **x.xxx** |
-| Calinski-Harabasz Score | **xxx.xx** |
+Several useful features were engineered to improve predictive performance, including:
 
-The optimal number of clusters was selected using both the **Elbow Method** and **Silhouette Analysis**. Although larger values of K slightly improved the silhouette score, **K = 5** provided the best balance between performance and business interpretability.
+- Total Living Area
+- Total Bathrooms
+- House Age
+- Total Porch Area
+- Overall Property Score
+
+Feature engineering helps models capture more meaningful relationships within the data.
 
 ---
 
-# 📊 Results Summary
+# 🤖 Models Used
+
+The following regression algorithms were implemented and compared:
+
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+
+The best-performing model was selected based on evaluation metrics.
+
+---
+
+# 📊 Model Evaluation
+
+| Metric | Description |
+|---------|-------------|
+| MAE | Mean Absolute Error |
+| MSE | Mean Squared Error |
+| RMSE | Root Mean Squared Error |
+| R² Score | Coefficient of Determination |
+
+These metrics were used to compare different regression models and select the best-performing model.
+
+---
+
+# 📈 Results Summary
 
 | Item | Result |
 |------|--------|
-| Dataset | Mall Customers |
-| Samples | 200 |
-| Features | 5 |
-| Algorithm | K-Means |
-| Optimal Clusters | 5 |
-| Scaling | StandardScaler |
-| Dimensionality Reduction | PCA |
-| Evaluation Metrics | Silhouette + Davies-Bouldin + Calinski-Harabasz |
+| Dataset | House Prices |
+| Training Samples | 1460 |
+| Testing Samples | 1459 |
+| Features | 80 |
+| Target Variable | SalePrice |
+| Models Compared | 3 |
+| Best Model | Random Forest Regressor *(if applicable)* |
+| Pipeline | Scikit-Learn Pipeline |
 
 ---
 
 # 📈 Key Results
 
-- Successfully segmented customers into **5 meaningful clusters**
-- Applied **StandardScaler** before clustering
-- Identified optimal K using Elbow Method
-- Evaluated clusters using three performance metrics
-- Visualized customer groups using PCA
-- Created customer personas for marketing strategies
+- Successfully predicted house prices using regression models.
+- Built a complete end-to-end Machine Learning pipeline.
+- Compared multiple regression algorithms.
+- Improved model performance using feature engineering.
+- Applied hyperparameter tuning for optimization.
+- Generated prediction files for unseen test data.
 
 ---
 
 # 📷 Project Visualizations
 
-## Customer Segmentation
+## House Price Distribution
 
-![Customer Clusters](images/customer_clusters.png)
-
----
-
-## Elbow Method
-
-![Elbow Method](images/elbow_method.png)
-
----
-
-## PCA Visualization
-
-![PCA Clusters](images/pca_clusters.png)
+```text
+images/house_price_distribution.png
+```
 
 ---
 
 ## Correlation Heatmap
 
-![Correlation Heatmap](images/correlation_heatmap.png)
+```text
+images/correlation_heatmap.png
+```
 
 ---
 
-## Pairplot
+## Missing Values Heatmap
 
-![Pairplot](images/pairplot.png)
-
----
-
-## Age Distribution
-
-![Age Distribution](images/age_distribution.png)
+```text
+images/missing_values.png
+```
 
 ---
 
-## Annual Income Distribution
+## Feature Importance
 
-![Income Distribution](images/annual_income_distribution.png)
+```text
+images/feature_importance.png
+```
 
 ---
 
-## Spending Score Distribution
+## Actual vs Predicted Prices
 
-![Spending Distribution](images/spending_score_distribution.png)
+```text
+images/actual_vs_predicted.png
+```
+
+---
+
+## Model Comparison
+
+```text
+images/model_comparison.png
+```
 
 ---
 
 # 💼 Business Insights
 
-The clustering model identified several distinct customer groups with different purchasing behaviors.
+The predictive model provides valuable insights for the real estate industry.
 
 ### Business Recommendations
 
-- 🎯 Offer premium memberships to high-income, high-spending customers.
-- 🎁 Introduce loyalty rewards for regular shoppers.
-- 📢 Create personalized campaigns for high-income but low-spending customers.
-- 🛍️ Offer budget-friendly promotions to low-income segments.
-- 📈 Improve marketing efficiency using customer segmentation.
-- 💰 Increase customer retention through personalized recommendations.
+- 🏡 Estimate property prices accurately.
+- 📈 Assist buyers in making informed purchasing decisions.
+- 💰 Help sellers determine competitive pricing.
+- 🏢 Support real estate agencies with automated valuations.
+- 📊 Enable data-driven pricing strategies.
+- 🤝 Improve investment decision-making using predictive analytics.
 
 ---
 
@@ -331,31 +364,31 @@ The clustering model identified several distinct customer groups with different 
 Clone the repository
 
 ```bash
-git clone https://github.com/abhijinkiri-create/SCT_ML_Task02_CustomerSegmentation.git
+git clone https://github.com/abhijinkiri-create/SCT_ML_Task01_HousePricePrediction.git
 ```
 
 Navigate to the project directory
 
 ```bash
-cd SCT_ML_Task02_CustomerSegmentation
+cd SCT_ML_Task01_HousePricePrediction
 ```
 
-Install dependencies
+Install required libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Launch Jupyter Notebook
+Run the Machine Learning Pipeline
 
 ```bash
-jupyter notebook
+python src/ml_pipeline.py
 ```
 
-Open
+Generate Predictions
 
-```text
-Customer_Segmentation.ipynb
+```bash
+python src/predict.py
 ```
 
 ---
@@ -363,29 +396,42 @@ Customer_Segmentation.ipynb
 # 📁 Project Structure
 
 ```text
-SCT_ML_Task02_CustomerSegmentation
+SCT_ML_Task01_HousePricePrediction
 │
 ├── data/
-│   └── Mall_Customers.csv
+│   ├── train.csv
+│   ├── test.csv
+│   └── sample_submission.csv
+│
+├── notebook/
+│   └── House_Price_Prediction.ipynb
 │
 ├── images/
-│   ├── age_distribution.png
-│   ├── annual_income_distribution.png
-│   ├── spending_score_distribution.png
-│   ├── gender_distribution.png
-│   ├── boxplot_age.png
-│   ├── boxplot_income.png
-│   ├── boxplot_spending.png
+│   ├── house_price_distribution.png
 │   ├── correlation_heatmap.png
-│   ├── pairplot.png
-│   ├── elbow_method.png
-│   ├── silhouette_score.png
-│   ├── customer_clusters.png
-│   ├── pca_clusters.png
+│   ├── missing_values.png
+│   ├── feature_importance.png
+│   ├── actual_vs_predicted.png
+│   ├── model_comparison.png
 │
-├── Customer_Segmentation.ipynb
-├── clustered_customers.csv
-├── cluster_profile.csv
+├── src/
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── feature_selection.py
+│   ├── model.py
+│   ├── model_comparison.py
+│   ├── hyperparameter_tuning.py
+│   ├── ml_pipeline.py
+│   └── predict.py
+│
+├── models/
+│   └── house_price_pipeline.pkl
+│
+├── outputs/
+│   ├── submission.csv
+│   ├── feature_importance.csv
+│   └── model_comparison.csv
+│
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
@@ -396,14 +442,16 @@ SCT_ML_Task02_CustomerSegmentation
 
 # 🚀 Future Improvements
 
-- Implement DBSCAN clustering
-- Compare with Agglomerative Clustering
+- Implement XGBoost
+- Implement LightGBM
+- Implement CatBoost
+- Apply Cross-Validation Optimization
+- Use SHAP for Model Explainability
+- Deploy using FastAPI
+- Containerize using Docker
+- Track experiments with MLflow
 - Build an interactive Streamlit Dashboard
-- Deploy using Streamlit Cloud
-- Add Customer Recommendation System
-- Enable Real-Time Customer Segmentation
-- Include additional behavioral features
-- Compare multiple clustering algorithms
+- Deploy on Streamlit Cloud
 
 ---
 
@@ -431,17 +479,15 @@ https://www.linkedin.com/in/abhinay-jinkiri-302b67324/
 
 - ✔️ Data Cleaning
 - ✔️ Exploratory Data Analysis
+- ✔️ Missing Value Handling
 - ✔️ Feature Engineering
-- ✔️ Feature Scaling
-- ✔️ StandardScaler
-- ✔️ Elbow Method
-- ✔️ Silhouette Analysis
-- ✔️ K-Means Clustering
-- ✔️ PCA Visualization
-- ✔️ Plotly Interactive Charts
-- ✔️ Business Insights
-- ✔️ Customer Personas
-- ✔️ Cluster Evaluation
+- ✔️ Feature Selection
+- ✔️ Regression Models
+- ✔️ Hyperparameter Tuning
+- ✔️ Model Comparison
+- ✔️ Machine Learning Pipeline
+- ✔️ Model Evaluation
+- ✔️ Prediction System
 - ✔️ Professional Documentation
 
 ---
@@ -450,19 +496,19 @@ https://www.linkedin.com/in/abhinay-jinkiri-302b67324/
 
 During this project, I gained practical experience in:
 
-- Unsupervised Machine Learning
-- Customer Segmentation
+- Supervised Machine Learning
+- Regression Analysis
 - Data Cleaning
 - Data Visualization
 - Exploratory Data Analysis
 - Feature Engineering
-- StandardScaler
-- K-Means Clustering
-- PCA
-- Cluster Evaluation
-- Business Analytics
+- Feature Selection
+- Hyperparameter Tuning
+- Machine Learning Pipelines
+- Model Evaluation
+- Predictive Analytics
 - Git & GitHub
-- Project Documentation
+- Professional Project Documentation
 
 ---
 
@@ -471,11 +517,11 @@ During this project, I gained practical experience in:
 | Category | Details |
 |-----------|---------|
 | Internship | SkillCraft Technology |
-| Task | Task 02 |
+| Task | Task 01 |
 | Domain | Machine Learning |
-| Algorithm | K-Means Clustering |
-| Project Type | Unsupervised Learning |
-| Dataset | Mall Customers |
+| Project Type | Supervised Learning |
+| Algorithm | Regression |
+| Dataset | House Prices |
 | Status | ✅ Completed |
 
 ---
@@ -486,7 +532,7 @@ During this project, I gained practical experience in:
 
 If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
 
-This project was developed as part of the **SkillCraft Technology Machine Learning Internship (Task 02)**.
+This project was developed as part of the **SkillCraft Technology Machine Learning Internship (Task 01)**.
 
 **Happy Learning! 🚀**
 
